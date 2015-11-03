@@ -14,8 +14,39 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 	
 	@IBOutlet var tableView: UITableView! = UITableView()
 	
-	
-	var emoticons: [String] = [ "¯\\_(ツ)_/¯", "(╯°益°)╯彡┻━┻", "ಠ_ಠ", "＼(◎o◎)／", "(✿◠‿◠)", "(◕‿◕)", "＼(＾▽＾)／", "(^人^)", "(ノ*ﾟ▽ﾟ*)", "(￢_￢)", "(*-_-)", "(・人・)", "(¬‿¬ )", "(⊙_⊙)", "(￣▽￣)ノ", "(・_・)ノ", "( -_・)", "(งಠ_ಠ)ง", "(￣▽￣)/♫•*¨*•.¸¸♪", "(￣^￣)ゞ", "(　･ω･)☞", "( ͡° ͜ʖ ͡°)"]
+	var emoticons: [String] = [
+		"¯\\_(ツ)_/¯",
+		"(งಠ_ಠ)ง",
+		"(╯°益°)╯彡┻━┻",
+		"( ͡° ͜ʖ ͡°)",
+		"(͡° ͜ʖ ͡°)",
+		"╭∩╮(Ο_Ο)╭∩╮",
+		"ಠ_ಠ",
+		"＼(◎o◎)／",
+		"(◠‿◠)",
+		"(◕‿◕)",
+		"＼(＾▽＾)／",
+		"(ノ*ﾟ▽ﾟ*)",
+		"(￢_￢)",
+		"(¬‿¬ )",
+		"(⊙_⊙)",
+		"(・▽・)ノ",
+		"( -‿・)",
+		"(・▽・)/♫•*¨*•.¸¸♪",
+		"(￣^￣)ゞ",
+		"(　･ω･)☞",
+		"▄︻̷̿┻̿═━一",
+		"༼ つ ◕_◕ ༽つ",
+		"(づ￣ ³￣)づ",
+		"[̲̅$̲̅(̲̅5̲̅)̲̅$̲̅]",
+		"ʕ•ᴥ•ʔ",
+		"(▀̿Ĺ̯▀̿ ̿)",
+		"(ಥ﹏ಥ)",
+		"(☞ﾟヮﾟ)☞ ☜(ﾟヮﾟ☜)",
+		"┬┴┬┴┤(･_├┬┴┬┴",
+		"ᕙ(⇀‸↼‶)ᕗ",
+		"ヽ(⌐■_■)ノ♪♬"
+	]
 	
 	override func updateViewConstraints() {
 		super.updateViewConstraints()
@@ -50,17 +81,15 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 		cell.backgroundColor = UIColor(red: 0.647, green: 0.894, blue: 0.953, alpha: 1.00)
 		cell.layoutMargins = UIEdgeInsetsZero
 		cell.preservesSuperviewLayoutMargins = false
+		let backgroundView = UIView()
+		backgroundView.backgroundColor = UIColor(red: 0.306, green: 0.416, blue: 0.439, alpha: 1.00)
+		cell.selectedBackgroundView = backgroundView
 		return cell
 	}
 	
 	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 		self.textDocumentProxy.insertText(emoticons[indexPath.row])
 		tableView.deselectRowAtIndexPath(indexPath, animated: true)
-	}
-	
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated
 	}
 	
 	override func textWillChange(textInput: UITextInput?) {
@@ -78,6 +107,10 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 			textColor = UIColor.blackColor()
 		}
 		self.nextKeyboardButton.setTitleColor(textColor, forState: .Normal)
+	}
+	
+	@IBAction func backspace(sender: AnyObject) {
+		self.textDocumentProxy.deleteBackward()
 	}
 
 
