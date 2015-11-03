@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3ng-iC-waX">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Emoticon Keyboard-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EmoticonKeyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeScreen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KLc-BA-HBM">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To enable the keyboard, go into:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tut-HV-JY2">
+                                <rect key="frame" x="20" y="93" width="560" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Pss-OC-qrK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yue-x3-4zj">
+                                <rect key="frame" x="271" y="122" width="57" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MHq-bq-Hge"/>
+                                    <constraint firstAttribute="width" constant="57" id="g9a-pd-Blh"/>
+                                </constraints>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" red="0.43921568630000002" green="0.90980392160000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="MHq-bq-Hge"/>
+                                        <exclude reference="g9a-pd-Blh"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="openSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4aI-QJ-7h9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQn-DX-nVy">
+                                <rect key="frame" x="283" y="160" width="34" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Akc-GR-6MH">
+                                <rect key="frame" x="273" y="198" width="54" height="30"/>
+                                <animations/>
+                                <state key="normal" title="General">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymJ-bg-o40">
+                                <rect key="frame" x="267" y="236" width="66" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Keyboard">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhU-NX-5ld">
+                                <rect key="frame" x="264" y="274" width="73" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Keyboards">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxZ-LG-eVL">
+                                <rect key="frame" x="228" y="312" width="144" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Add New Keyboard...">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJI-fp-0NL">
+                                <rect key="frame" x="233" y="350" width="134" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Emoticon Keyboard">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kMJ-1z-BgI">
+                                <rect key="frame" x="251" y="570" width="97" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6ws-4C-U0Q"/>
+                                    <constraint firstAttribute="width" constant="97" id="gus-6M-vPF"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bhU-NX-5ld" firstAttribute="centerX" secondItem="ymJ-bg-o40" secondAttribute="centerX" id="5iH-OT-9Xp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KLc-BA-HBM" secondAttribute="trailing" constant="-20" id="7qL-mJ-DLs"/>
+                            <constraint firstItem="ymJ-bg-o40" firstAttribute="centerX" secondItem="Akc-GR-6MH" secondAttribute="centerX" id="85j-gK-Ya9"/>
+                            <constraint firstItem="Akc-GR-6MH" firstAttribute="top" secondItem="WQn-DX-nVy" secondAttribute="bottom" constant="8" id="97x-cH-ZQF"/>
+                            <constraint firstItem="Yue-x3-4zj" firstAttribute="centerX" secondItem="Tut-HV-JY2" secondAttribute="centerX" id="BsV-xT-Oxc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KLc-BA-HBM" secondAttribute="bottom" id="C4v-xT-2a2"/>
+                            <constraint firstItem="Tut-HV-JY2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="D8T-wU-g6T"/>
+                            <constraint firstItem="Yue-x3-4zj" firstAttribute="top" secondItem="Tut-HV-JY2" secondAttribute="bottom" constant="8" id="EVC-7F-mHd"/>
+                            <constraint firstItem="kMJ-1z-BgI" firstAttribute="centerX" secondItem="KLc-BA-HBM" secondAttribute="centerX" id="Ibc-Jd-h8X"/>
+                            <constraint firstItem="WQn-DX-nVy" firstAttribute="top" secondItem="Yue-x3-4zj" secondAttribute="bottom" constant="8" id="JKV-Sk-buR"/>
+                            <constraint firstItem="Akc-GR-6MH" firstAttribute="centerX" secondItem="WQn-DX-nVy" secondAttribute="centerX" id="Lw5-mh-qj3"/>
+                            <constraint firstItem="WxZ-LG-eVL" firstAttribute="top" secondItem="bhU-NX-5ld" secondAttribute="bottom" constant="8" id="PZD-a8-k0H"/>
+                            <constraint firstItem="Akc-GR-6MH" firstAttribute="centerX" secondItem="Yue-x3-4zj" secondAttribute="centerX" id="TOo-5J-CZl"/>
+                            <constraint firstItem="KLc-BA-HBM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="WRa-9Z-jMl"/>
+                            <constraint firstItem="KLc-BA-HBM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="YLu-jQ-Ufh"/>
+                            <constraint firstItem="WxZ-LG-eVL" firstAttribute="centerX" secondItem="bhU-NX-5ld" secondAttribute="centerX" id="a3C-8U-Raf"/>
+                            <constraint firstItem="lJI-fp-0NL" firstAttribute="top" secondItem="WxZ-LG-eVL" secondAttribute="bottom" constant="8" id="at9-0r-JnB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kMJ-1z-BgI" secondAttribute="bottom" id="bLD-y7-qlK"/>
+                            <constraint firstItem="WQn-DX-nVy" firstAttribute="centerX" secondItem="Yue-x3-4zj" secondAttribute="centerX" id="bVn-xR-L99"/>
+                            <constraint firstItem="ymJ-bg-o40" firstAttribute="top" secondItem="Akc-GR-6MH" secondAttribute="bottom" constant="8" id="eDX-F0-V5w"/>
+                            <constraint firstItem="bhU-NX-5ld" firstAttribute="top" secondItem="ymJ-bg-o40" secondAttribute="bottom" constant="8" id="fnp-o3-XbH"/>
+                            <constraint firstItem="lJI-fp-0NL" firstAttribute="centerX" secondItem="WxZ-LG-eVL" secondAttribute="centerX" id="gof-tz-wv9"/>
+                            <constraint firstItem="Tut-HV-JY2" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jUR-sp-AFr"/>
+                            <constraint firstItem="Tut-HV-JY2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="vNI-3K-Qck"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Emoticon Keyboard" id="MC6-jp-6VX"/>
+                    <connections>
+                        <outlet property="anotherButton" destination="WQn-DX-nVy" id="U6O-pX-Ztd"/>
+                        <outlet property="backgroundImage" destination="KLc-BA-HBM" id="Lmv-8r-5yE"/>
+                        <outlet property="buttonFive" destination="WxZ-LG-eVL" id="NfH-0H-XDd"/>
+                        <outlet property="buttonFour" destination="bhU-NX-5ld" id="bmQ-UW-J9Q"/>
+                        <outlet property="buttonOne" destination="Yue-x3-4zj" id="7iz-9T-cUO"/>
+                        <outlet property="buttonSix" destination="lJI-fp-0NL" id="y72-ve-Iz5"/>
+                        <outlet property="buttonThree" destination="ymJ-bg-o40" id="Pja-xr-gW3"/>
+                        <outlet property="buttonTwo" destination="Akc-GR-6MH" id="fxA-ZC-zQY"/>
+                        <outlet property="label" destination="Tut-HV-JY2" id="LLV-VM-Lzd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1512" y="479"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hdi-zj-yKo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3ng-iC-waX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="75D-Q7-uw9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iNy-N1-hqP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VHU-h8-eJY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="479"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="homeScreen.jpg" width="750" height="1334"/>
+    </resources>
+</document>
