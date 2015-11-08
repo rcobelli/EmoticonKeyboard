@@ -57,7 +57,7 @@ func snapshot(name: String, waitForLoadingIndicator: Bool = true)
     {
         let query = XCUIApplication().statusBars.childrenMatchingType(.Other).elementBoundByIndex(1).childrenMatchingType(.Other)
         
-        while (query.count > 4) {
+        while (query.count > 5) {
             sleep(1)
             print("Number of Elements in Status Bar: \(query.count)... waiting for status bar to disappear")
         }

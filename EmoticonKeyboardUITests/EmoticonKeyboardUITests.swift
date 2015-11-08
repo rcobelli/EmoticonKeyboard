@@ -33,14 +33,16 @@ class EmoticonKeyboardUITests: XCTestCase {
     }
     
 	func testExample() {
-
+		let app = XCUIApplication()
 		XCUIDevice.sharedDevice().orientation = .FaceUp
-		NSThread.sleepForTimeInterval(1)
-		snapshot("mainScreen")
-		
-		
-		
-		
+		sleep(1)
+		snapshot("1-mainScreen")
+		app.otherElements.containingType(.NavigationBar, identifier:"Emoticon Keyboard").childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.TextField).element.tap()
+		let nextKeyboardButton = app.buttons["Next keyboard"]
+		nextKeyboardButton.tap()
+		nextKeyboardButton.tap()
+		sleep(1)
+		snapshot("0-keyboard")
     }
     
 }

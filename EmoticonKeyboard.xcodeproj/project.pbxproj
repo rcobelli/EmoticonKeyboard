@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		942C81911BEFB4FD00A94706 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A405C91BEFAC5D00A7CAFB /* MessageUI.framework */; };
 		947A0E4B1BE843EE0051B89D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A0E4A1BE843EE0051B89D /* AppDelegate.swift */; };
 		947A0E4D1BE843EE0051B89D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A0E4C1BE843EE0051B89D /* ViewController.swift */; };
 		947A0E501BE843EE0051B89D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947A0E4E1BE843EE0051B89D /* Main.storyboard */; };
@@ -21,8 +22,6 @@
 		9486E99A1BE8688900DF5BB7 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9486E9981BE8688900DF5BB7 /* background.png */; };
 		9486E99B1BE8688900DF5BB7 /* logotext.png in Resources */ = {isa = PBXBuildFile; fileRef = 9486E9991BE8688900DF5BB7 /* logotext.png */; };
 		9486E9A11BE8730500DF5BB7 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9486E9A01BE8730500DF5BB7 /* SnapshotHelper.swift */; };
-		9486E9A51BE970D100DF5BB7 /* Globe-100-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9486E9A41BE970D100DF5BB7 /* Globe-100-2.png */; };
-		9486E9A71BE970DA00DF5BB7 /* Backspace-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 9486E9A61BE970DA00DF5BB7 /* Backspace-100.png */; };
 		94A405CA1BEFAC5D00A7CAFB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A405C91BEFAC5D00A7CAFB /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,8 +78,6 @@
 		9486E9981BE8688900DF5BB7 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		9486E9991BE8688900DF5BB7 /* logotext.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logotext.png; sourceTree = "<group>"; };
 		9486E9A01BE8730500DF5BB7 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
-		9486E9A41BE970D100DF5BB7 /* Globe-100-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Globe-100-2.png"; sourceTree = "<group>"; };
-		9486E9A61BE970DA00DF5BB7 /* Backspace-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Backspace-100.png"; sourceTree = "<group>"; };
 		94A405C91BEFAC5D00A7CAFB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -89,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				942C81911BEFB4FD00A94706 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,8 +174,6 @@
 		9486E99C1BE8689100DF5BB7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9486E9A41BE970D100DF5BB7 /* Globe-100-2.png */,
-				9486E9A61BE970DA00DF5BB7 /* Backspace-100.png */,
 				947A0E8B1BE863650051B89D /* homeScreen.jpg */,
 				947A0E561BE843EE0051B89D /* Info.plist */,
 				9486E9981BE8688900DF5BB7 /* background.png */,
@@ -302,14 +298,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9486E9A51BE970D100DF5BB7 /* Globe-100-2.png in Resources */,
 				9486E9971BE8685E00DF5BB7 /* LaunchScreen.xib in Resources */,
 				9486E99A1BE8688900DF5BB7 /* background.png in Resources */,
 				947A0E8C1BE863650051B89D /* homeScreen.jpg in Resources */,
 				9486E99B1BE8688900DF5BB7 /* logotext.png in Resources */,
 				947A0E521BE843EE0051B89D /* Assets.xcassets in Resources */,
 				947A0E501BE843EE0051B89D /* Main.storyboard in Resources */,
-				9486E9A71BE970DA00DF5BB7 /* Backspace-100.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
