@@ -105,6 +105,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJf-sz-gCH">
+                                <rect key="frame" x="145" y="532" width="311" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Submit new emoticons to rybelllc@gmail.com">
+                                    <color key="titleColor" red="0.43921568630000002" green="0.90980392160000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="openMail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tH0-dH-fk1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -118,12 +128,14 @@
                             <constraint firstItem="Tut-HV-JY2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="D8T-wU-g6T"/>
                             <constraint firstItem="Yue-x3-4zj" firstAttribute="top" secondItem="Tut-HV-JY2" secondAttribute="bottom" constant="8" id="EVC-7F-mHd"/>
                             <constraint firstItem="kMJ-1z-BgI" firstAttribute="centerX" secondItem="KLc-BA-HBM" secondAttribute="centerX" id="Ibc-Jd-h8X"/>
+                            <constraint firstItem="kMJ-1z-BgI" firstAttribute="top" secondItem="yJf-sz-gCH" secondAttribute="bottom" constant="8" id="J1e-bd-Hej"/>
                             <constraint firstItem="WQn-DX-nVy" firstAttribute="top" secondItem="Yue-x3-4zj" secondAttribute="bottom" constant="8" id="JKV-Sk-buR"/>
                             <constraint firstItem="Akc-GR-6MH" firstAttribute="centerX" secondItem="WQn-DX-nVy" secondAttribute="centerX" id="Lw5-mh-qj3"/>
                             <constraint firstItem="WxZ-LG-eVL" firstAttribute="top" secondItem="bhU-NX-5ld" secondAttribute="bottom" constant="8" id="PZD-a8-k0H"/>
                             <constraint firstItem="Akc-GR-6MH" firstAttribute="centerX" secondItem="Yue-x3-4zj" secondAttribute="centerX" id="TOo-5J-CZl"/>
                             <constraint firstItem="KLc-BA-HBM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="WRa-9Z-jMl"/>
                             <constraint firstItem="KLc-BA-HBM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="YLu-jQ-Ufh"/>
+                            <constraint firstItem="yJf-sz-gCH" firstAttribute="centerX" secondItem="KLc-BA-HBM" secondAttribute="centerX" id="Z3K-uM-svA"/>
                             <constraint firstItem="WxZ-LG-eVL" firstAttribute="centerX" secondItem="bhU-NX-5ld" secondAttribute="centerX" id="a3C-8U-Raf"/>
                             <constraint firstItem="lJI-fp-0NL" firstAttribute="top" secondItem="WxZ-LG-eVL" secondAttribute="bottom" constant="8" id="at9-0r-JnB"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kMJ-1z-BgI" secondAttribute="bottom" id="bLD-y7-qlK"/>

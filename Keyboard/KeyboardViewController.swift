@@ -19,9 +19,11 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 		"(งಠ_ಠ)ง",
 		"(╯°益°)╯彡┻━┻",
 		"( ͡° ͜ʖ ͡°)",
+		"🖕",
 		"(͡° ͜ʖ ͡°)",
 		"╭∩╮(Ο_Ο)╭∩╮",
 		"ಠ_ಠ",
+		"(∪｡∪)｡｡｡zzz",
 		"＼(◎o◎)／",
 		"(◠‿◠)",
 		"(◕‿◕)",
@@ -88,7 +90,12 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 	}
 	
 	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		self.textDocumentProxy.insertText(emoticons[indexPath.row])
+		if tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text == "🖕" {
+			self.textDocumentProxy.insertText("                      /´¯/)\n                    ,/¯  /\n                   /    /\n             /´¯/'   '/´¯¯`·¸\n          /'/   /    /       /¨¯\\\n        ('(   ´   ´     ¯~/'   ')\n         \\                 '     /\n          \\               _ ·´\n            \\              (\n              \\             \\   ")
+		}
+		else {
+			self.textDocumentProxy.insertText(emoticons[indexPath.row])
+		}
 		tableView.deselectRowAtIndexPath(indexPath, animated: true)
 	}
 	

@@ -23,6 +23,7 @@
 		9486E9A11BE8730500DF5BB7 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9486E9A01BE8730500DF5BB7 /* SnapshotHelper.swift */; };
 		9486E9A51BE970D100DF5BB7 /* Globe-100-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9486E9A41BE970D100DF5BB7 /* Globe-100-2.png */; };
 		9486E9A71BE970DA00DF5BB7 /* Backspace-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 9486E9A61BE970DA00DF5BB7 /* Backspace-100.png */; };
+		94A405CA1BEFAC5D00A7CAFB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A405C91BEFAC5D00A7CAFB /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		9486E9A01BE8730500DF5BB7 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		9486E9A41BE970D100DF5BB7 /* Globe-100-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Globe-100-2.png"; sourceTree = "<group>"; };
 		9486E9A61BE970DA00DF5BB7 /* Backspace-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Backspace-100.png"; sourceTree = "<group>"; };
+		94A405C91BEFAC5D00A7CAFB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94A405CA1BEFAC5D00A7CAFB /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +190,7 @@
 		9486E99D1BE8689600DF5BB7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				94A405C91BEFAC5D00A7CAFB /* MessageUI.framework */,
 				9486E9941BE867D400DF5BB7 /* Paralax Lib */,
 			);
 			name = Frameworks;

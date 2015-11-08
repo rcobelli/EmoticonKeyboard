@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
 	
 	@IBOutlet weak var label: UILabel!
 	@IBOutlet weak var buttonOne: UIButton!
@@ -41,6 +42,18 @@ class ViewController: UIViewController {
 	@IBAction func openSettings(sender: AnyObject) {
 		UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
 	}
+	
+	@IBAction func openMail(sender: AnyObject) {
+		if MFMailComposeViewController.canSendMail() {
+			let picker = MFMailComposeViewController()
+			picker.mailComposeDelegate = self
+			picker.setSubject("Emoticon Keyboard: Emoticon Submission")
+			presentViewController(picker, animated: true, completion: nil)
+		}
+	}
 
+	func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+		dismissViewControllerAnimated(true, completion: nil)
+	}
+	
 }
-

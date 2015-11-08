@@ -33,10 +33,14 @@ class EmoticonKeyboardUITests: XCTestCase {
     }
     
 	func testExample() {
-		XCUIDevice.sharedDevice().orientation = .FaceUp
+
 		XCUIDevice.sharedDevice().orientation = .FaceUp
 		NSThread.sleepForTimeInterval(1)
 		snapshot("mainScreen")
+		
+		
+		
+		
     }
     
 }

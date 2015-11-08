@@ -26,18 +26,17 @@
                         <outlet property="delegate" destination="-1" id="QUS-Em-Q8y"/>
                     </connections>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbC-JL-mbI">
-                    <rect key="frame" x="275" y="175" width="45" height="45"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbC-JL-mbI">
+                    <rect key="frame" x="282" y="182" width="30" height="30"/>
                     <animations/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="45" id="oB5-B9-HB0"/>
-                        <constraint firstAttribute="height" constant="45" id="r5i-ft-WOo"/>
+                        <constraint firstAttribute="width" constant="30" id="oB5-B9-HB0"/>
+                        <constraint firstAttribute="height" constant="30" id="r5i-ft-WOo"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                    <state key="normal" title="🌎"/>
+                    <state key="normal" image="Globe-100-2.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uu-9j-ae5">
-                    <rect key="frame" x="275" y="145" width="45" height="30"/>
+                    <rect key="frame" x="275" y="144" width="45" height="30"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="HFI-wX-NUX"/>
@@ -55,12 +54,12 @@
             <animations/>
             <color key="backgroundColor" red="0.30196078431372547" green="0.41568627450980394" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="GbC-JL-mbI" secondAttribute="trailing" id="0TZ-Qs-fQ4"/>
-                <constraint firstItem="GbC-JL-mbI" firstAttribute="top" secondItem="6uu-9j-ae5" secondAttribute="bottom" id="0sJ-Fl-q9p"/>
+                <constraint firstAttribute="trailing" secondItem="GbC-JL-mbI" secondAttribute="trailing" constant="8" id="0TZ-Qs-fQ4"/>
+                <constraint firstItem="GbC-JL-mbI" firstAttribute="top" secondItem="6uu-9j-ae5" secondAttribute="bottom" constant="8" id="0sJ-Fl-q9p"/>
                 <constraint firstAttribute="trailing" secondItem="41y-iB-9b4" secondAttribute="trailing" id="7Co-aR-rZS"/>
                 <constraint firstAttribute="bottom" secondItem="41y-iB-9b4" secondAttribute="bottom" id="BJy-VX-Oa5"/>
                 <constraint firstItem="41y-iB-9b4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="GS8-gB-5jo"/>
-                <constraint firstAttribute="bottom" secondItem="GbC-JL-mbI" secondAttribute="bottom" id="HP3-C0-Gl3"/>
+                <constraint firstAttribute="bottom" secondItem="GbC-JL-mbI" secondAttribute="bottom" constant="8" id="HP3-C0-Gl3"/>
                 <constraint firstAttribute="trailing" secondItem="6uu-9j-ae5" secondAttribute="trailing" id="PGr-mG-gvx"/>
                 <constraint firstItem="41y-iB-9b4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="k7S-Xj-8ol"/>
             </constraints>
@@ -68,4 +67,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
+    <resources>
+        <image name="Globe-100-2.png" width="100" height="100"/>
+    </resources>
 </document>
