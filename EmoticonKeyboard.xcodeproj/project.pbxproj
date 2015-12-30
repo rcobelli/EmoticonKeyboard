@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		940A08A21C25A6F200A2A962 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 940A08A41C25A6F200A2A962 /* Localizable.strings */; };
+		941D3E931C250C39002642A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 941D3E951C250C39002642A7 /* InfoPlist.strings */; };
+		941D3E981C250C39002642A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 941D3E9A1C250C39002642A7 /* InfoPlist.strings */; };
+		941D3E9D1C250C39002642A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 941D3E9F1C250C39002642A7 /* Localizable.strings */; };
+		941D3EA21C250C39002642A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 941D3EA41C250C39002642A7 /* InfoPlist.strings */; };
 		942C81911BEFB4FD00A94706 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A405C91BEFAC5D00A7CAFB /* MessageUI.framework */; };
 		947A0E4B1BE843EE0051B89D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A0E4A1BE843EE0051B89D /* AppDelegate.swift */; };
 		947A0E4D1BE843EE0051B89D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A0E4C1BE843EE0051B89D /* ViewController.swift */; };
@@ -57,6 +62,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		940A08A31C25A6F200A2A962 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		940A08A51C25A71200A2A962 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		940A08A61C25A71900A2A962 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		940A08A71C25A71E00A2A962 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		941D3E941C250C39002642A7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		941D3E991C250C39002642A7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		941D3E9E1C250C39002642A7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		941D3EA31C250C39002642A7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		941D3EA51C250C44002642A7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		941D3EA61C250C45002642A7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		941D3EA71C250C45002642A7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		941D3EA81C250C45002642A7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		941D3EA91C250C4A002642A7 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		941D3EAA1C250C4B002642A7 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		941D3EAB1C250C4B002642A7 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		941D3EAC1C250C4B002642A7 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		941D3EAD1C250C50002642A7 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		941D3EAE1C250C50002642A7 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		941D3EAF1C250C50002642A7 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		941D3EB01C250C50002642A7 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		947A0E471BE843EE0051B89D /* EmoticonKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmoticonKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		947A0E4A1BE843EE0051B89D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		947A0E4C1BE843EE0051B89D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +96,14 @@
 		947A0E721BE8444D0051B89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		947A0E7A1BE8448C0051B89D /* Keyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Keyboard.xib; sourceTree = "<group>"; };
 		947A0E8B1BE863650051B89D /* homeScreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = homeScreen.jpg; sourceTree = "<group>"; };
+		9480F2741C0B626E00CB2930 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		9480F2751C0B626E00CB2930 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9480F2761C0B627100CB2930 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		9480F2771C0B627100CB2930 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9480F2781C0B627500CB2930 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		9480F2791C0B627500CB2930 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9480F27A1C0B627B00CB2930 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
+		9480F27B1C0B627B00CB2930 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		9486E9901BE8653600DF5BB7 /* EmoticonKeyboard-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EmoticonKeyboard-Bridging-Header.h"; sourceTree = "<group>"; };
 		9486E9911BE8653700DF5BB7 /* UIView+MWParallax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MWParallax.h"; sourceTree = "<group>"; };
 		9486E9921BE8653700DF5BB7 /* UIView+MWParallax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MWParallax.m"; sourceTree = "<group>"; };
@@ -145,6 +178,8 @@
 		947A0E5E1BE843EE0051B89D /* EmoticonKeyboardUITests */ = {
 			isa = PBXGroup;
 			children = (
+				940A08A41C25A6F200A2A962 /* Localizable.strings */,
+				941D3E9A1C250C39002642A7 /* InfoPlist.strings */,
 				9486E9A01BE8730500DF5BB7 /* SnapshotHelper.swift */,
 				947A0E5F1BE843EE0051B89D /* EmoticonKeyboardUITests.swift */,
 				947A0E611BE843EE0051B89D /* Info.plist */,
@@ -155,6 +190,7 @@
 		947A0E6F1BE8444D0051B89D /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
+				941D3E951C250C39002642A7 /* InfoPlist.strings */,
 				947A0E701BE8444D0051B89D /* KeyboardViewController.swift */,
 				947A0E721BE8444D0051B89D /* Info.plist */,
 				947A0E7A1BE8448C0051B89D /* Keyboard.xib */,
@@ -174,6 +210,8 @@
 		9486E99C1BE8689100DF5BB7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				941D3EA41C250C39002642A7 /* InfoPlist.strings */,
+				941D3E9F1C250C39002642A7 /* Localizable.strings */,
 				947A0E8B1BE863650051B89D /* homeScreen.jpg */,
 				947A0E561BE843EE0051B89D /* Info.plist */,
 				9486E9981BE8688900DF5BB7 /* background.png */,
@@ -280,6 +318,10 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
+				it,
+				es,
+				de,
 			);
 			mainGroup = 947A0E3E1BE843EE0051B89D;
 			productRefGroup = 947A0E481BE843EE0051B89D /* Products */;
@@ -299,8 +341,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9486E9971BE8685E00DF5BB7 /* LaunchScreen.xib in Resources */,
+				941D3EA21C250C39002642A7 /* InfoPlist.strings in Resources */,
 				9486E99A1BE8688900DF5BB7 /* background.png in Resources */,
 				947A0E8C1BE863650051B89D /* homeScreen.jpg in Resources */,
+				941D3E9D1C250C39002642A7 /* Localizable.strings in Resources */,
 				9486E99B1BE8688900DF5BB7 /* logotext.png in Resources */,
 				947A0E521BE843EE0051B89D /* Assets.xcassets in Resources */,
 				947A0E501BE843EE0051B89D /* Main.storyboard in Resources */,
@@ -311,6 +355,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				941D3E981C250C39002642A7 /* InfoPlist.strings in Resources */,
+				940A08A21C25A6F200A2A962 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				947A0E7B1BE8448C0051B89D /* Keyboard.xib in Resources */,
+				941D3E931C250C39002642A7 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,10 +415,69 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		940A08A41C25A6F200A2A962 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				940A08A31C25A6F200A2A962 /* de */,
+				940A08A51C25A71200A2A962 /* es */,
+				940A08A61C25A71900A2A962 /* fr */,
+				940A08A71C25A71E00A2A962 /* it */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		941D3E951C250C39002642A7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				941D3E941C250C39002642A7 /* de */,
+				941D3EA51C250C44002642A7 /* es */,
+				941D3EA91C250C4A002642A7 /* fr */,
+				941D3EAD1C250C50002642A7 /* it */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		941D3E9A1C250C39002642A7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				941D3E991C250C39002642A7 /* de */,
+				941D3EA61C250C45002642A7 /* es */,
+				941D3EAA1C250C4B002642A7 /* fr */,
+				941D3EAE1C250C50002642A7 /* it */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		941D3E9F1C250C39002642A7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				941D3E9E1C250C39002642A7 /* de */,
+				941D3EA71C250C45002642A7 /* es */,
+				941D3EAB1C250C4B002642A7 /* fr */,
+				941D3EAF1C250C50002642A7 /* it */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		941D3EA41C250C39002642A7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				941D3EA31C250C39002642A7 /* de */,
+				941D3EA81C250C45002642A7 /* es */,
+				941D3EAC1C250C4B002642A7 /* fr */,
+				941D3EB01C250C50002642A7 /* it */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		947A0E4E1BE843EE0051B89D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				947A0E4F1BE843EE0051B89D /* Base */,
+				9480F2741C0B626E00CB2930 /* fr */,
+				9480F2761C0B627100CB2930 /* de */,
+				9480F2781C0B627500CB2930 /* es */,
+				9480F27A1C0B627B00CB2930 /* it */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -380,6 +486,10 @@
 			isa = PBXVariantGroup;
 			children = (
 				9486E9961BE8685E00DF5BB7 /* Base */,
+				9480F2751C0B626E00CB2930 /* fr */,
+				9480F2771C0B627100CB2930 /* de */,
+				9480F2791C0B627500CB2930 /* es */,
+				9480F27B1C0B627B00CB2930 /* it */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -479,7 +589,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EmoticonKeyboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rybel-llc.stalkigram";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -497,7 +607,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EmoticonKeyboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rybel-llc.stalkigram";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -534,7 +644,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Keyboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rybel-llc.stalkigram.keyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -548,7 +658,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Keyboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rybel-llc.stalkigram.keyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";

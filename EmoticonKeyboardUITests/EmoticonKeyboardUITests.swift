@@ -12,19 +12,13 @@ class EmoticonKeyboardUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-		
+
 		let app = XCUIApplication()
-		setLanguage(app)
+		continueAfterFailure = false
+		setupSnapshot(app)
+//		app.launchArguments += ["-AppleLanguages", "it"]
 		app.launch()
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
     override func tearDown() {
@@ -34,15 +28,41 @@ class EmoticonKeyboardUITests: XCTestCase {
     
 	func testExample() {
 		let app = XCUIApplication()
+		
+		print(app.launchArguments)
+		
 		XCUIDevice.sharedDevice().orientation = .FaceUp
 		sleep(1)
 		snapshot("1-mainScreen")
-		app.otherElements.containingType(.NavigationBar, identifier:"Emoticon Keyboard").childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.TextField).element.tap()
-		let nextKeyboardButton = app.buttons["Next keyboard"]
-		nextKeyboardButton.tap()
-		nextKeyboardButton.tap()
-		sleep(1)
+		app.textFields["Text Field"].tap()
+		
+
+		if deviceLanguage.containsString("en") {
+			app.buttons["Next keyboard"].tap()
+		}
+		else if deviceLanguage.containsString("fr") {
+			app.buttons["Clavier suivant"].tap()
+		}
+		else if deviceLanguage.containsString("de") {
+			app.buttons["Nächste Tastatur"].tap()
+		}
+		else if deviceLanguage.containsString("it") {
+			app.buttons["Tastiera successiva"].tap()
+		}
+		else if deviceLanguage.containsString("es") {
+			app.buttons["Teclado siguiente"].tap()
+		}
+		sleep(2)
 		snapshot("0-keyboard")
+		
     }
+	
+	func localizedString(key:String) -> String {
+		/*1*/ let localizationBundle = NSBundle(path: NSBundle(forClass: EmoticonKeyboardUITests.self).pathForResource(deviceLanguage, ofType: "lproj")!)
+		/*3*/ let result = NSLocalizedString(key, bundle:localizationBundle!, comment: "") //
+		return result
+	}
     
 }
+
+

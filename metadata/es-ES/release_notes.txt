@@ -1,0 +1,2 @@
+Añadido soporte para nuevos idiomas
+Correcciones de errores menores

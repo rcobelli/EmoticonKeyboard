@@ -1,0 +1,30 @@
+/* Class = "UIButton"; normalTitle = "General"; ObjectID = "Akc-GR-6MH"; */
+"Akc-GR-6MH.normalTitle" = "General";
+
+/* Class = "UINavigationItem"; title = "Emoticon Keyboard"; ObjectID = "MC6-jp-6VX"; */
+"MC6-jp-6VX.title" = "Emoticon Teclado";
+
+/* Class = "UILabel"; text = "To enable the keyboard, go into:"; ObjectID = "Tut-HV-JY2"; */
+"Tut-HV-JY2.text" = "Para activar el teclado, vaya a:";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "WQn-DX-nVy"; */
+"WQn-DX-nVy.normalTitle" = "Atrás";
+
+/* Class = "UIButton"; normalTitle = "Add New Keyboard..."; ObjectID = "WxZ-LG-eVL"; */
+"WxZ-LG-eVL.normalTitle" = "Añadir nuevo teclado...";
+
+/* Class = "UIButton"; normalTitle = "Settings"; ObjectID = "Yue-x3-4zj"; */
+"Yue-x3-4zj.normalTitle" = "Ajustes";
+
+/* Class = "UIButton"; normalTitle = "Keyboards"; ObjectID = "bhU-NX-5ld"; */
+"bhU-NX-5ld.normalTitle" = "Teclados";
+
+/* Class = "UIButton"; normalTitle = "Emoticon Keyboard"; ObjectID = "lJI-fp-0NL"; */
+"lJI-fp-0NL.normalTitle" = "Emoticon Teclado";
+
+/* Class = "UIButton"; normalTitle = "Submit new emoticons to rybelllc@gmail.com"; ObjectID = "yJf-sz-gCH"; */
+"yJf-sz-gCH.normalTitle" = "Presentar nuevos emoticonos para rybelllc@gmail.com";
+
+/* Class = "UIButton"; normalTitle = "Keyboard"; ObjectID = "ymJ-bg-o40"; */
+"ymJ-bg-o40.normalTitle" = "Teclado";
+

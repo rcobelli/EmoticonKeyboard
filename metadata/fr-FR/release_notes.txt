@@ -1,0 +1,2 @@
+Ajout du support pour de nouvelles langues
+Corrections de bugs mineurs
