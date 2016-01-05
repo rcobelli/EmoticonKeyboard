@@ -56,12 +56,6 @@ class EmoticonKeyboardUITests: XCTestCase {
 		snapshot("0-keyboard")
 		
     }
-	
-	func localizedString(key:String) -> String {
-		/*1*/ let localizationBundle = NSBundle(path: NSBundle(forClass: EmoticonKeyboardUITests.self).pathForResource(deviceLanguage, ofType: "lproj")!)
-		/*3*/ let result = NSLocalizedString(key, bundle:localizationBundle!, comment: "") //
-		return result
-	}
     
 }
 

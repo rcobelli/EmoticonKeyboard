@@ -11,11 +11,11 @@
  ])
 
 languages([
-  "en-US",
-  "fr-FR",
+#  "en-US",
+#  "fr-FR",
   "de-DE",
-  "it",
-  "es-ES"
+#  "it",
+#  "es-ES"
 ])
 
 # The name of the scheme which contains the UI Tests

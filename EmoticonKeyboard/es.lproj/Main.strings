@@ -1,5 +1,14 @@
+/* Class = "UINavigationItem"; title = "Emoticon Keyboard"; ObjectID = "2be-ru-Mkj"; */
+"2be-ru-Mkj.title" = "Teclado Emoticono";
+
 /* Class = "UIButton"; normalTitle = "General"; ObjectID = "Akc-GR-6MH"; */
 "Akc-GR-6MH.normalTitle" = "General";
+
+/* Class = "UIButton"; normalTitle = "Visit Our Support Website"; ObjectID = "FpL-81-8nQ"; */
+"FpL-81-8nQ.normalTitle" = "Visite nuestro sitio Web de soporte";
+
+/* Class = "UIButton"; normalTitle = "Email Us"; ObjectID = "Kkc-mL-3mL"; */
+"Kkc-mL-3mL.normalTitle" = "Envíenos un correo electrónico";
 
 /* Class = "UINavigationItem"; title = "Emoticon Keyboard"; ObjectID = "MC6-jp-6VX"; */
 "MC6-jp-6VX.title" = "Emoticon Teclado";
@@ -13,8 +22,14 @@
 /* Class = "UIButton"; normalTitle = "Add New Keyboard..."; ObjectID = "WxZ-LG-eVL"; */
 "WxZ-LG-eVL.normalTitle" = "Añadir nuevo teclado...";
 
+/* Class = "UITabBarItem"; title = "Instructions"; ObjectID = "Xe5-EP-9WY"; */
+"Xe5-EP-9WY.title" = "Instrucciones";
+
 /* Class = "UIButton"; normalTitle = "Settings"; ObjectID = "Yue-x3-4zj"; */
 "Yue-x3-4zj.normalTitle" = "Ajustes";
+
+/* Class = "UITabBarItem"; title = "Contact Us"; ObjectID = "ZCr-HC-It7"; */
+"ZCr-HC-It7.title" = "Contáctenos";
 
 /* Class = "UIButton"; normalTitle = "Keyboards"; ObjectID = "bhU-NX-5ld"; */
 "bhU-NX-5ld.normalTitle" = "Teclados";
@@ -22,8 +37,8 @@
 /* Class = "UIButton"; normalTitle = "Emoticon Keyboard"; ObjectID = "lJI-fp-0NL"; */
 "lJI-fp-0NL.normalTitle" = "Emoticon Teclado";
 
-/* Class = "UIButton"; normalTitle = "Submit new emoticons to rybelllc@gmail.com"; ObjectID = "yJf-sz-gCH"; */
-"yJf-sz-gCH.normalTitle" = "Presentar nuevos emoticonos para rybelllc@gmail.com";
+/* Class = "UITabBarItem"; title = "Emoticon List"; ObjectID = "nzN-gy-6hc"; */
+"nzN-gy-6hc.title" = "Lista Emoticono";
 
 /* Class = "UIButton"; normalTitle = "Keyboard"; ObjectID = "ymJ-bg-o40"; */
 "ymJ-bg-o40.normalTitle" = "Teclado";

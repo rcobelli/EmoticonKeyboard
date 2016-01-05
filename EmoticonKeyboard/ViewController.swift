@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import MessageUI
 
-class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class ViewController: UIViewController {
 	
 	@IBOutlet weak var label: UILabel!
 	@IBOutlet weak var buttonOne: UIButton!
@@ -21,7 +20,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
 	@IBOutlet weak var backgroundImage: UIImageView!
 	@IBOutlet weak var anotherButton: UIButton!
 	
-	@IBOutlet weak var emailUsButtonOutlet: UIButton!
+//	@IBOutlet weak var emailUsButtonOutlet: UIButton!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -34,8 +33,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
 		buttonSix.iOS6ParallaxIntensity = 10
 		anotherButton.iOS6ParallaxIntensity = 10
 		UINavigationBar.appearance().tintColor = UIColor(red: 0.435, green: 0.443, blue: 0.443, alpha: 1.00)
-		
-		emailUsButtonOutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -45,19 +43,6 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
 	@IBAction func openSettings(sender: AnyObject) {
 		UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
-	}
-	
-	@IBAction func openMail(sender: AnyObject) {
-		if MFMailComposeViewController.canSendMail() {
-			let picker = MFMailComposeViewController()
-			picker.mailComposeDelegate = self
-			picker.setSubject(NSLocalizedString("Emoticon Keyboard: Emoticon Submission", comment: ""))
-			presentViewController(picker, animated: true, completion: nil)
-		}
-	}
-
-	func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
-		dismissViewControllerAnimated(true, completion: nil)
 	}
 	
 }
