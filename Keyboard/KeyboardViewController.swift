@@ -8,10 +8,13 @@
 
 import UIKit
 
-class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITableViewDataSource {
+class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate {
 	
 	@IBOutlet var nextKeyboardButton: UIButton!
 	@IBOutlet var tableView: UITableView! = UITableView()
+	
+	var timer: NSTimer!
+	var popupView = UIView()
 	
 	var emoticons: [String] = [
 		"¯\\_(ツ)_/¯",
@@ -21,6 +24,7 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 		"[ ± _ ± ]",
 		"( ͡° ͜ʖ ͡°)",
 		"(͡° ͜ʖ ͡°)",
+		NSLocalizedString("Loser", comment: "Loser text emoji"),
 		"ಠ_ಠ",
 		"٩(͡๏̯͡๏)۶",
 		"(⊙_☉)",
@@ -29,7 +33,7 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 		"＼(◎o◎)／",
 		"ᗧʻ̑ ˙̫ ʻ̑ᗤ⍝",
 		"(◠‿◠)",
-		"( •́ ✖ •̀)",
+		"( •́ X •̀)",
 		"┗(°0°)┛",
 		"(-_ゞ",
 		"u_u",
@@ -84,7 +88,6 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 		nextKeyboardButton.addTarget(self, action: "advanceToNextInputMode", forControlEvents: .TouchUpInside)
 	}
 
-	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return emoticons.count
 	}
@@ -98,6 +101,13 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 		let backgroundView = UIView()
 		backgroundView.backgroundColor = UIColor(red: 0.306, green: 0.416, blue: 0.439, alpha: 1.00)
 		cell.selectedBackgroundView = backgroundView
+		
+		// Add long press gesure recognizer for copying contents
+		let lpgr = UILongPressGestureRecognizer(target: self, action: "handleLongPress:")
+		lpgr.minimumPressDuration = 2.0
+		lpgr.delegate = self
+		cell.addGestureRecognizer(lpgr)
+
 		return cell
 	}
 	
@@ -105,19 +115,74 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 		if tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text == "🖕" {
 			self.textDocumentProxy.insertText("                      /´¯/)\n                    ,/¯  /\n                   /    /\n             /´¯/'   '/´¯¯`·¸\n          /'/   /    /       /¨¯\\\n        ('(   ´   ´     ¯~/'   ')\n         \\                 '     /\n          \\               _ ·´\n            \\              (\n              \\             \\   ")
 		}
+		else if tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text == NSLocalizedString("Loser", comment: "Loser text emoji") {
+			self.textDocumentProxy.insertText("        |\n        |\n        |\n    .-'\"|\"\"\"'-.        \n  .'    |____  `.    \n /   .      .    \\   \n:                 : \n|                 |  \n:   \\        /    :    \n \\   `.____.'    /            \n  `.           .'     \n    `-._____.-' ")
+		}
 		else {
 			self.textDocumentProxy.insertText(emoticons[indexPath.row])
 		}
 		tableView.deselectRowAtIndexPath(indexPath, animated: true)
 	}
 	
-	override func textWillChange(textInput: UITextInput?) {
-		// The app is about to change the document's contents. Perform any preparation here.
+	// Copy cell contents to clipboard
+	func handleLongPress(gestureReconizer: UILongPressGestureRecognizer) {
+			if gestureReconizer.state != UIGestureRecognizerState.Ended {
+				return
+			}
+			
+			let p = gestureReconizer.locationInView(self.tableView)
+			let indexPath = self.tableView.indexPathForRowAtPoint(p)
+			
+			if let _ = indexPath {
+				if emoticons[(indexPath?.row)!] == "🖕" {
+					UIPasteboard.generalPasteboard().string = "                      /´¯/)\n                    ,/¯  /\n                   /    /\n             /´¯/'   '/´¯¯`·¸\n          /'/   /    /       /¨¯\\\n        ('(   ´   ´     ¯~/'   ')\n         \\                 '     /\n          \\               _ ·´\n            \\              (\n              \\             \\   "
+				}
+				else if emoticons[(indexPath?.row)!] == NSLocalizedString("Loser", comment: "Loser text emoji") {
+					UIPasteboard.generalPasteboard().string = "        |\n        |\n        |\n    .-'\"|\"\"\"'-.        \n  .'    |____  `.    \n /   .      .    \\   \n:                 : \n|                 |  \n:   \\        /    :    \n \\   `.____.'    /            \n  `.           .'     \n    `-._____.-' "
+				}
+				else {
+					UIPasteboard.generalPasteboard().string = emoticons[(indexPath?.row)!]
+				}
+				createPopup()
+			}
+			else {
+				print("Could not find index path")
+			}
 	}
 	
-	override func textDidChange(textInput: UITextInput?) {
-		// The app has just changed the document's contents, the document context has been updated.
+	// Create popup with check mark over copy icon
+	func createPopup() {
+		popupView = UIView(frame: CGRectMake(self.view.frame.size.width/2-50, self.view.frame.size.height/2-50, 100, 100))
+		popupView.backgroundColor = UIColor(white: 0.8, alpha: 0.8)
+		popupView.layer.cornerRadius = 25
+		popupView.layer.borderWidth = 2
+		popupView.alpha = 0
 		
+		let backgroundImage = UIImageView(frame: CGRectMake(12.5, 12.5, 75, 75))
+		backgroundImage.image = UIImage(named: "checkmark")
+		backgroundImage.tintColor = UIColor.greenColor()
+		popupView.addSubview(backgroundImage)
+		self.view.addSubview(popupView)
+		
+		UIView.animateWithDuration(0.175) {
+			self.popupView.alpha = 1
+		}
+		
+		NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "removePopup", userInfo: nil, repeats: false)
+	}
+	
+	func removePopup() {
+		UIView.animateWithDuration(0.175, animations: {
+				self.popupView.alpha = 0
+			}, completion: { _ in
+				self.popupView.removeFromSuperview()
+		})
+		
+	}
+	
+	override func textWillChange(textInput: UITextInput?) {}
+	
+	override func textDidChange(textInput: UITextInput?) {
 		var textColor: UIColor
 		let proxy = self.textDocumentProxy
 		if proxy.keyboardAppearance == UIKeyboardAppearance.Dark {
@@ -128,9 +193,17 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 		self.nextKeyboardButton.setTitleColor(textColor, forState: .Normal)
 	}
 	
-	@IBAction func backspace(sender: AnyObject) {
+	func backspace(sender: AnyObject) {
 		self.textDocumentProxy.deleteBackward()
 	}
-
+	
+	@IBAction func buttonDown(sender: AnyObject) {
+		backspace(self)
+		timer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: "backspace:", userInfo: nil, repeats: true)
+	}
+	
+	@IBAction func buttonUp(sender: AnyObject) {
+		timer.invalidate()
+	}
 
 }

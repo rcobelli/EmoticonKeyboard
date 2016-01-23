@@ -1,2 +1,4 @@
-Unterstützung für neue Sprachen
-Kleinere Korrekturen
+Hinzugefügt lang drücken zum Kopieren
+New "Loser Symbol" Emoticon
+Halten Sie die Rücktaste, wie Standardtastatur
+Kleinere Bugfixes und Verbesserungen

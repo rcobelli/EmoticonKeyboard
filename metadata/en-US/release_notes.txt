@@ -1,2 +1,4 @@
-Added support for new languages
-Minor bug fixes
+Added long-press to copy
+New "Loser Symbol" emoticon
+Hold the backspace button like default keyboard
+Minor bug fixes and improvements

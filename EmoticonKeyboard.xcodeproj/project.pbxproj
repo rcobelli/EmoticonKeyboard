@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94223EBE1C532308005B3DDF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94223EBD1C532308005B3DDF /* Images.xcassets */; };
+		94223EC01C53291B005B3DDF /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 94223EBF1C53291B005B3DDF /* settings.png */; };
+		94223EC31C533026005B3DDF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94223EC51C533026005B3DDF /* Localizable.strings */; };
 		942C43A21C3B0D1F00E9BC18 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942C43A11C3B0D1F00E9BC18 /* ListTableViewController.swift */; };
 		942C43A41C3B0D3600E9BC18 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942C43A31C3B0D3600E9BC18 /* ContactUsViewController.swift */; };
 		942C43A71C3B3E0900E9BC18 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 942C43A91C3B3E0900E9BC18 /* InfoPlist.strings */; };
@@ -49,6 +52,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		94223EBC1C531F42005B3DDF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		947A0E791BE8444D0051B89D /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,6 +76,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		94170B081C533051009208AF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		94170B091C533057009208AF /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		94223EBD1C532308005B3DDF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		94223EBF1C53291B005B3DDF /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		94223EC41C533026005B3DDF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		94223EC61C533032005B3DDF /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		942C43A11C3B0D1F00E9BC18 /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		942C43A31C3B0D3600E9BC18 /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		942C43A81C3B3E0900E9BC18 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -190,6 +209,8 @@
 		947A0E6F1BE8444D0051B89D /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
+				94223EC51C533026005B3DDF /* Localizable.strings */,
+				94223EBD1C532308005B3DDF /* Images.xcassets */,
 				942C43A91C3B3E0900E9BC18 /* InfoPlist.strings */,
 				947A0E701BE8444D0051B89D /* KeyboardViewController.swift */,
 				947A0E721BE8444D0051B89D /* Info.plist */,
@@ -210,6 +231,7 @@
 		9486E99C1BE8689100DF5BB7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				94223EBF1C53291B005B3DDF /* settings.png */,
 				942C43B81C3B3E0B00E9BC18 /* InfoPlist.strings */,
 				942C43B31C3B3E0B00E9BC18 /* Localizable.strings */,
 				947A0E8B1BE863650051B89D /* homeScreen.jpg */,
@@ -241,6 +263,7 @@
 				947A0E441BE843EE0051B89D /* Frameworks */,
 				947A0E451BE843EE0051B89D /* Resources */,
 				947A0E791BE8444D0051B89D /* Embed App Extensions */,
+				94223EBC1C531F42005B3DDF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -342,6 +365,7 @@
 			files = (
 				9486E9971BE8685E00DF5BB7 /* LaunchScreen.xib in Resources */,
 				942C43B61C3B3E0B00E9BC18 /* InfoPlist.strings in Resources */,
+				94223EC01C53291B005B3DDF /* settings.png in Resources */,
 				9486E99A1BE8688900DF5BB7 /* background.png in Resources */,
 				947A0E8C1BE863650051B89D /* homeScreen.jpg in Resources */,
 				942C43B11C3B3E0B00E9BC18 /* Localizable.strings in Resources */,
@@ -363,6 +387,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94223EBE1C532308005B3DDF /* Images.xcassets in Resources */,
+				94223EC31C533026005B3DDF /* Localizable.strings in Resources */,
 				947A0E7B1BE8448C0051B89D /* Keyboard.xib in Resources */,
 				942C43A71C3B3E0900E9BC18 /* InfoPlist.strings in Resources */,
 			);
@@ -416,6 +442,17 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		94223EC51C533026005B3DDF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94223EC41C533026005B3DDF /* de */,
+				94223EC61C533032005B3DDF /* es */,
+				94170B081C533051009208AF /* fr */,
+				94170B091C533057009208AF /* it */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		942C43A91C3B3E0900E9BC18 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

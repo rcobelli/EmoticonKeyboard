@@ -1,2 +1,4 @@
-Aggiunto il supporto per nuove lingue
-Correzioni di bug minori
+Aggiunto tenere premuto per copiare
+Nuovo emoticon "Symbol Loser"
+Tenere premuto il tasto backspace come tastiera predefinita
+Correzioni di bug minori e miglioramenti

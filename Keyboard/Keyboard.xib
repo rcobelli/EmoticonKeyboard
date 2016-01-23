@@ -45,7 +45,8 @@
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="backspace:" destination="-1" eventType="touchUpInside" id="oI5-VG-7Ou"/>
+                        <action selector="buttonDown:" destination="-1" eventType="touchDown" id="heM-R2-hF5"/>
+                        <action selector="buttonUp:" destination="-1" eventType="touchUpInside" id="cYW-m9-5Ux"/>
                     </connections>
                 </button>
             </subviews>

@@ -1,2 +1,4 @@
-Añadido soporte para nuevos idiomas
-Correcciones de errores menores
+Añadido largo de prensa para copiar
+Nueva emoticon "Símbolo Loser"
+Mantenga pulsado el botón de retroceso como teclado predeterminado
+Soluciones de errores leves y mejoras
