@@ -24,7 +24,6 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 		"[ ± _ ± ]",
 		"( ͡° ͜ʖ ͡°)",
 		"(͡° ͜ʖ ͡°)",
-		NSLocalizedString("Loser", comment: "Loser text emoji"),
 		"ಠ_ಠ",
 		"٩(͡๏̯͡๏)۶",
 		"(⊙_☉)",
@@ -115,9 +114,6 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 		if tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text == "🖕" {
 			self.textDocumentProxy.insertText("                      /´¯/)\n                    ,/¯  /\n                   /    /\n             /´¯/'   '/´¯¯`·¸\n          /'/   /    /       /¨¯\\\n        ('(   ´   ´     ¯~/'   ')\n         \\                 '     /\n          \\               _ ·´\n            \\              (\n              \\             \\   ")
 		}
-		else if tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text == NSLocalizedString("Loser", comment: "Loser text emoji") {
-			self.textDocumentProxy.insertText("        |\n        |\n        |\n    .-'\"|\"\"\"'-.        \n  .'    |____  `.    \n /   .      .    \\   \n:                 : \n|                 |  \n:   \\        /    :    \n \\   `.____.'    /            \n  `.           .'     \n    `-._____.-' ")
-		}
 		else {
 			self.textDocumentProxy.insertText(emoticons[indexPath.row])
 		}
@@ -136,9 +132,6 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 			if let _ = indexPath {
 				if emoticons[(indexPath?.row)!] == "🖕" {
 					UIPasteboard.generalPasteboard().string = "                      /´¯/)\n                    ,/¯  /\n                   /    /\n             /´¯/'   '/´¯¯`·¸\n          /'/   /    /       /¨¯\\\n        ('(   ´   ´     ¯~/'   ')\n         \\                 '     /\n          \\               _ ·´\n            \\              (\n              \\             \\   "
-				}
-				else if emoticons[(indexPath?.row)!] == NSLocalizedString("Loser", comment: "Loser text emoji") {
-					UIPasteboard.generalPasteboard().string = "        |\n        |\n        |\n    .-'\"|\"\"\"'-.        \n  .'    |____  `.    \n /   .      .    \\   \n:                 : \n|                 |  \n:   \\        /    :    \n \\   `.____.'    /            \n  `.           .'     \n    `-._____.-' "
 				}
 				else {
 					UIPasteboard.generalPasteboard().string = emoticons[(indexPath?.row)!]

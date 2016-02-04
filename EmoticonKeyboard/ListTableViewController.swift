@@ -18,7 +18,6 @@ class ListTableViewController: UITableViewController {
 		"[ ± _ ± ]",
 		"( ͡° ͜ʖ ͡°)",
 		"(͡° ͜ʖ ͡°)",
-		NSLocalizedString("Loser", comment: "Loser text emoji"),
 		"ಠ_ಠ",
 		"٩(͡๏̯͡๏)۶",
 		"(⊙_☉)",
