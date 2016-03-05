@@ -31,7 +31,6 @@
 		9486E99A1BE8688900DF5BB7 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9486E9981BE8688900DF5BB7 /* background.png */; };
 		9486E99B1BE8688900DF5BB7 /* logotext.png in Resources */ = {isa = PBXBuildFile; fileRef = 9486E9991BE8688900DF5BB7 /* logotext.png */; };
 		9486E9A11BE8730500DF5BB7 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9486E9A01BE8730500DF5BB7 /* SnapshotHelper.swift */; };
-		94A405CA1BEFAC5D00A7CAFB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A405C91BEFAC5D00A7CAFB /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +92,7 @@
 		942C43BB1C3B3E1600E9BC18 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		942C43BC1C3B3E1600E9BC18 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		942C43BD1C3B3E1D00E9BC18 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		945858E31C782E080011F6F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		947A0E471BE843EE0051B89D /* EmoticonKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmoticonKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		947A0E4A1BE843EE0051B89D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		947A0E4C1BE843EE0051B89D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -152,7 +152,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94A405CA1BEFAC5D00A7CAFB /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +459,7 @@
 				942C43B91C3B3E1500E9BC18 /* es */,
 				942C43BD1C3B3E1D00E9BC18 /* fr */,
 				948B808D1C3B3E3D004EA6B0 /* it */,
+				945858E31C782E080011F6F0 /* Base */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
