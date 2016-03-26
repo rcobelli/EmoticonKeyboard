@@ -4,18 +4,18 @@
  devices([
    "iPhone 6",
    "iPhone 6 Plus",
-   "iPhone 5s",
+   "iPhone 5",
    "iPhone 4s",
    "iPad Retina",
    "iPad Pro",
  ])
 
 languages([
-#  "en-US",
-#  "fr-FR",
+  "en-US",
+  "fr-FR",
   "de-DE",
-#  "it",
-#  "es-ES"
+  "it",
+  "es-ES"
 ])
 
 # The name of the scheme which contains the UI Tests

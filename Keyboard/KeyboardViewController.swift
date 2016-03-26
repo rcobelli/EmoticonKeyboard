@@ -12,6 +12,7 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 	
 	@IBOutlet var nextKeyboardButton: UIButton!
 	@IBOutlet var tableView: UITableView! = UITableView()
+	@IBOutlet var backSpaceOutlet: UIButton!
 	
 	var timer: NSTimer!
 	var popupView = UIView()
@@ -30,11 +31,9 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 		"(っ- ‸ – ς)",
 		"(∪｡∪)｡｡｡zzz",
 		"＼(◎o◎)／",
-		"ᗧʻ̑ ˙̫ ʻ̑ᗤ⍝",
-		"(◠‿◠)",
-		"( •́ X •̀)",
 		"┗(°0°)┛",
 		"(-_ゞ",
+		"(◑́_◑᷅ )",
 		"u_u",
 		"(◕‿◕)",
 		"＼(＾▽＾)／",
@@ -42,13 +41,8 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 		"(￢_￢)",
 		"(¬‿¬ )",
 		"(⊙_⊙)",
-		"⁀⊙﹏☉⁀ ",
 		"╭∩╮(Ο_Ο)╭∩╮",
 		"🖕",
-		"(・﹃・)",
-		"(・◇・)",
-		"(・▽・)ノ",
-		"( -‿・)",
 		"(・▽・)/♫•*¨*•.¸¸♪",
 		"(￣^￣)ゞ",
 		"(　･ω･)☞",
@@ -61,9 +55,13 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 		"(ಥ﹏ಥ)",
 		"(☞ﾟヮﾟ)☞ ☜(ﾟヮﾟ☜)",
 		"┬┴┬┴┤(･_├┬┴┬┴",
+		"ᕙ( ︡'︡益'︠)ง",
 		"ᕙ(⇀‸↼‶)ᕗ",
-		"ヽ(⌐■_■)ノ♪♬"
+		"ヽ(⌐▀̿_▀̿)ノ♪♬"
 	]
+	
+	var color = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.00)
+	var textColor = UIColor.blackColor()
 	
 	override func updateViewConstraints() {
 		super.updateViewConstraints()
@@ -84,7 +82,19 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 		tableView.tableFooterView = UIView(frame: CGRectZero)
 		tableView.separatorInset = UIEdgeInsetsZero
 
-		nextKeyboardButton.addTarget(self, action: "advanceToNextInputMode", forControlEvents: .TouchUpInside)
+		nextKeyboardButton.addTarget(self, action: #selector(UIInputViewController.advanceToNextInputMode), forControlEvents: .TouchUpInside)
+	}
+	
+	override func viewWillAppear(animated: Bool) {
+		if (self.textDocumentProxy.keyboardAppearance == UIKeyboardAppearance.Dark) {
+			color = UIColor(red: 0.192, green: 0.196, blue: 0.208, alpha: 1.00)
+			textColor = UIColor.whiteColor()
+			backSpaceOutlet.titleLabel?.textColor = UIColor.whiteColor()
+		}
+		else {
+			backSpaceOutlet.titleLabel?.textColor = UIColor.blackColor()
+		}
+		tableView.reloadData()
 	}
 
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -94,16 +104,17 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
 		cell.textLabel?.text = emoticons[indexPath.row]
-		cell.backgroundColor = UIColor(red: 0.647, green: 0.894, blue: 0.953, alpha: 1.00)
+		cell.textLabel?.textColor = textColor
+		cell.backgroundColor = color
 		cell.layoutMargins = UIEdgeInsetsZero
 		cell.preservesSuperviewLayoutMargins = false
 		let backgroundView = UIView()
-		backgroundView.backgroundColor = UIColor(red: 0.306, green: 0.416, blue: 0.439, alpha: 1.00)
+		backgroundView.backgroundColor = UIColor(red: 0.722, green: 0.663, blue: 0.533, alpha: 1.00)
 		cell.selectedBackgroundView = backgroundView
 		
 		// Add long press gesure recognizer for copying contents
-		let lpgr = UILongPressGestureRecognizer(target: self, action: "handleLongPress:")
-		lpgr.minimumPressDuration = 2.0
+		let lpgr = UILongPressGestureRecognizer(target: self, action: #selector(KeyboardViewController.handleLongPress(_:)))
+		lpgr.minimumPressDuration = 1.5
 		lpgr.delegate = self
 		cell.addGestureRecognizer(lpgr)
 
@@ -122,25 +133,29 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 	
 	// Copy cell contents to clipboard
 	func handleLongPress(gestureReconizer: UILongPressGestureRecognizer) {
-			if gestureReconizer.state != UIGestureRecognizerState.Ended {
-				return
-			}
-			
-			let p = gestureReconizer.locationInView(self.tableView)
-			let indexPath = self.tableView.indexPathForRowAtPoint(p)
-			
-			if let _ = indexPath {
-				if emoticons[(indexPath?.row)!] == "🖕" {
-					UIPasteboard.generalPasteboard().string = "                      /´¯/)\n                    ,/¯  /\n                   /    /\n             /´¯/'   '/´¯¯`·¸\n          /'/   /    /       /¨¯\\\n        ('(   ´   ´     ¯~/'   ')\n         \\                 '     /\n          \\               _ ·´\n            \\              (\n              \\             \\   "
-				}
-				else {
-					UIPasteboard.generalPasteboard().string = emoticons[(indexPath?.row)!]
-				}
-				createPopup()
+		if gestureReconizer.state != UIGestureRecognizerState.Ended {
+			return
+		}
+		
+		if (!isOpenAccessGranted()) {
+			return
+		}
+		
+		let p = gestureReconizer.locationInView(self.tableView)
+		let indexPath = self.tableView.indexPathForRowAtPoint(p)
+		
+		if let _ = indexPath {
+			if emoticons[(indexPath?.row)!] == "🖕" {
+				UIPasteboard.generalPasteboard().string = "                      /´¯/)\n                    ,/¯  /\n                   /    /\n             /´¯/'   '/´¯¯`·¸\n          /'/   /    /       /¨¯\\\n        ('(   ´   ´     ¯~/'   ')\n         \\                 '     /\n          \\               _ ·´\n            \\              (\n              \\             \\   "
 			}
 			else {
-				print("Could not find index path")
+				UIPasteboard.generalPasteboard().string = emoticons[(indexPath?.row)!]
 			}
+			createPopup()
+		}
+		else {
+			print("Could not find index path")
+		}
 	}
 	
 	// Create popup with check mark over copy icon
@@ -157,20 +172,17 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 		popupView.addSubview(backgroundImage)
 		self.view.addSubview(popupView)
 		
-		UIView.animateWithDuration(0.175) {
+		UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveEaseInOut, animations: {
 			self.popupView.alpha = 1
-		}
-		
-		NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "removePopup", userInfo: nil, repeats: false)
+			}, completion: { _ in
+				self.removePopup()
+			})
 	}
 	
 	func removePopup() {
-		UIView.animateWithDuration(0.175, animations: {
-				self.popupView.alpha = 0
-			}, completion: { _ in
-				self.popupView.removeFromSuperview()
-		})
-		
+		UIView.animateWithDuration(0.5, delay: 2.0, options: .CurveEaseInOut, animations: {
+			self.popupView.alpha = 0
+		}, completion: nil)
 	}
 	
 	override func textWillChange(textInput: UITextInput?) {}
@@ -186,13 +198,17 @@ class KeyboardViewController: UIInputViewController, UITableViewDelegate, UITabl
 		self.nextKeyboardButton.setTitleColor(textColor, forState: .Normal)
 	}
 	
+	func isOpenAccessGranted() -> Bool {
+		return UIPasteboard.generalPasteboard().isKindOfClass(UIPasteboard)
+	}
+	
 	func backspace(sender: AnyObject) {
 		self.textDocumentProxy.deleteBackward()
 	}
 	
 	@IBAction func buttonDown(sender: AnyObject) {
 		backspace(self)
-		timer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: "backspace:", userInfo: nil, repeats: true)
+		timer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: #selector(KeyboardViewController.backspace(_:)), userInfo: nil, repeats: true)
 	}
 	
 	@IBAction func buttonUp(sender: AnyObject) {

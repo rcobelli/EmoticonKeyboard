@@ -24,11 +24,9 @@ class ListTableViewController: UITableViewController {
 		"(っ- ‸ – ς)",
 		"(∪｡∪)｡｡｡zzz",
 		"＼(◎o◎)／",
-		"ᗧʻ̑ ˙̫ ʻ̑ᗤ⍝",
-		"(◠‿◠)",
-		"( •́ X •̀)",
 		"┗(°0°)┛",
 		"(-_ゞ",
+		"(◑́_◑᷅ )",
 		"u_u",
 		"(◕‿◕)",
 		"＼(＾▽＾)／",
@@ -36,13 +34,8 @@ class ListTableViewController: UITableViewController {
 		"(￢_￢)",
 		"(¬‿¬ )",
 		"(⊙_⊙)",
-		"⁀⊙﹏☉⁀ ",
 		"╭∩╮(Ο_Ο)╭∩╮",
 		"🖕",
-		"(・﹃・)",
-		"(・◇・)",
-		"(・▽・)ノ",
-		"( -‿・)",
 		"(・▽・)/♫•*¨*•.¸¸♪",
 		"(￣^￣)ゞ",
 		"(　･ω･)☞",
@@ -55,17 +48,17 @@ class ListTableViewController: UITableViewController {
 		"(ಥ﹏ಥ)",
 		"(☞ﾟヮﾟ)☞ ☜(ﾟヮﾟ☜)",
 		"┬┴┬┴┤(･_├┬┴┬┴",
+		"ᕙ( ︡'︡益'︠)ง",
 		"ᕙ(⇀‸↼‶)ᕗ",
-		"ヽ(⌐■_■)ノ♪♬"
+		"ヽ(⌐▀̿_▀̿)ノ♪♬"
 	]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
 		tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier:"cell")
-		tableView.separatorColor = UIColor(red: 0.435, green: 0.443, blue: 0.443, alpha: 1.00)
+		tableView.separatorColor = UIColor.blackColor()
 		tableView.tableFooterView = UIView(frame: CGRectZero)
-		tableView.separatorInset = UIEdgeInsetsZero
 		tableView.contentInset = UIEdgeInsetsMake(20.0, 0.0, 49.0, 0.0)
     }
 
@@ -83,11 +76,12 @@ class ListTableViewController: UITableViewController {
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
 		cell.textLabel?.text = emoticons[indexPath.row]
-		cell.backgroundColor = UIColor(red: 0.647, green: 0.894, blue: 0.953, alpha: 1.00)
+		cell.textLabel?.textColor = UIColor.blackColor()
+		cell.backgroundColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.00)
 		cell.layoutMargins = UIEdgeInsetsZero
 		cell.preservesSuperviewLayoutMargins = false
 		let backgroundView = UIView()
-		backgroundView.backgroundColor = UIColor(red: 0.306, green: 0.416, blue: 0.439, alpha: 1.00)
+		backgroundView.backgroundColor = UIColor(red: 0.722, green: 0.663, blue: 0.533, alpha: 1.00)
 		cell.selectedBackgroundView = backgroundView
 		return cell
 	}

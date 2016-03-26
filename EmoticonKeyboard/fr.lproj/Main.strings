@@ -1,45 +1,9 @@
-/* Class = "UINavigationItem"; title = "Emoticon Keyboard"; ObjectID = "2be-ru-Mkj"; */
-"2be-ru-Mkj.title" = "Émoticône Clavier";
-
-/* Class = "UIButton"; normalTitle = "General"; ObjectID = "Akc-GR-6MH"; */
-"Akc-GR-6MH.normalTitle" = "Général";
-
-/* Class = "UIButton"; normalTitle = "Visit Our Support Website"; ObjectID = "FpL-81-8nQ"; */
-"FpL-81-8nQ.normalTitle" = "Visitez notre site Web de support";
-
-/* Class = "UIButton"; normalTitle = "Email Us"; ObjectID = "Kkc-mL-3mL"; */
-"Kkc-mL-3mL.normalTitle" = "Envoyez-nous un email";
-
 /* Class = "UINavigationItem"; title = "Emoticon Keyboard"; ObjectID = "MC6-jp-6VX"; */
 "MC6-jp-6VX.title" = "Emoticon Clavier";
-
-/* Class = "UILabel"; text = "To enable the keyboard, go into:"; ObjectID = "Tut-HV-JY2"; */
-"Tut-HV-JY2.text" = "Pour activer le clavier, allez dans:";
-
-/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "WQn-DX-nVy"; */
-"WQn-DX-nVy.normalTitle" = "Arrière";
-
-/* Class = "UIButton"; normalTitle = "Add New Keyboard..."; ObjectID = "WxZ-LG-eVL"; */
-"WxZ-LG-eVL.normalTitle" = "Ajouter un nouveau clavier...";
 
 /* Class = "UITabBarItem"; title = "Instructions"; ObjectID = "Xe5-EP-9WY"; */
 "Xe5-EP-9WY.title" = "Instructions";
 
-/* Class = "UIButton"; normalTitle = "Settings"; ObjectID = "Yue-x3-4zj"; */
-"Yue-x3-4zj.normalTitle" = "Paramètres";
-
-/* Class = "UITabBarItem"; title = "Contact Us"; ObjectID = "ZCr-HC-It7"; */
-"ZCr-HC-It7.title" = "Contactez nous";
-
-/* Class = "UIButton"; normalTitle = "Keyboards"; ObjectID = "bhU-NX-5ld"; */
-"bhU-NX-5ld.normalTitle" = "Claviers";
-
-/* Class = "UIButton"; normalTitle = "Emoticon Keyboard"; ObjectID = "lJI-fp-0NL"; */
-"lJI-fp-0NL.normalTitle" = "Emoticon Clavier";
-
 /* Class = "UITabBarItem"; title = "Emoticon List"; ObjectID = "nzN-gy-6hc"; */
 "nzN-gy-6hc.title" = "Liste des émoticônes";
-
-/* Class = "UIButton"; normalTitle = "Keyboard"; ObjectID = "ymJ-bg-o40"; */
-"ymJ-bg-o40.normalTitle" = "Clavier";
 

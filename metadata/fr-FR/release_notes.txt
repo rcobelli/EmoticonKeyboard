@@ -1,4 +1,0 @@
-Ajouté à long presse à copier
-Nouveau "Symbole Loser" émoticône
-Maintenez le bouton de retour en arrière comme clavier par défaut
-Correctifs et améliorations de bugs mineurs
