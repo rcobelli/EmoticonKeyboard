@@ -30,7 +30,6 @@
 		9486E99A1BE8688900DF5BB7 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9486E9981BE8688900DF5BB7 /* background.png */; };
 		9486E99B1BE8688900DF5BB7 /* logotext.png in Resources */ = {isa = PBXBuildFile; fileRef = 9486E9991BE8688900DF5BB7 /* logotext.png */; };
 		9486E9A11BE8730500DF5BB7 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9486E9A01BE8730500DF5BB7 /* SnapshotHelper.swift */; };
-		94A69F701C8B95EE00E25464 /* ContactButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A69F6F1C8B95EE00E25464 /* ContactButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,7 +128,6 @@
 		948B808F1C3B3E3E004EA6B0 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		948B80901C3B3E3E004EA6B0 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		94A405C91BEFAC5D00A7CAFB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		94A69F6F1C8B95EE00E25464 /* ContactButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,7 +227,6 @@
 		9486E99C1BE8689100DF5BB7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				94A69F6F1C8B95EE00E25464 /* ContactButton.swift */,
 				94223EBF1C53291B005B3DDF /* settings.png */,
 				942C43B81C3B3E0B00E9BC18 /* InfoPlist.strings */,
 				942C43B31C3B3E0B00E9BC18 /* Localizable.strings */,
@@ -400,7 +397,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94A69F701C8B95EE00E25464 /* ContactButton.swift in Sources */,
 				947A0E4D1BE843EE0051B89D /* ViewController.swift in Sources */,
 				947A0E4B1BE843EE0051B89D /* AppDelegate.swift in Sources */,
 				9486E9931BE8653700DF5BB7 /* UIView+MWParallax.m in Sources */,

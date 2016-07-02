@@ -4,11 +4,13 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6787479FDC1F25036930DA11C1FF65DD4C273ADA" : 0,
     "4EA48C4418C0D37C936EB709C50F03661DB187D9" : 0,
     "A5851C87C56F750C1F293C51A714CF14BD348FC9" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B1AD81F4-E8FE-4E1F-81DA-F6D5416AEAD1",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6787479FDC1F25036930DA11C1FF65DD4C273ADA" : "",
     "4EA48C4418C0D37C936EB709C50F03661DB187D9" : "emoticon-keyboard\/PKHUD\/",
     "A5851C87C56F750C1F293C51A714CF14BD348FC9" : "emoticon-keyboard\/"
   },
@@ -20,6 +22,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pkluz\/PKHUD",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4EA48C4418C0D37C936EB709C50F03661DB187D9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/rybel-llc\/lp_backend.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6787479FDC1F25036930DA11C1FF65DD4C273ADA"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/bitbucket.org\/rybel-llc\/emoticon-keyboard.git",
