@@ -29,33 +29,22 @@ class EmoticonKeyboardUITests: XCTestCase {
 	func testDark() {
 		let app = XCUIApplication()
 		print(app.launchArguments)
-		XCUIDevice.sharedDevice().orientation = .FaceUp
+		XCUIDevice.shared.orientation = .faceUp
 		sleep(1)
 		
 		let tabBarsQuery = XCUIApplication().tabBars
-		tabBarsQuery.buttons.elementBoundByIndex(1).tap()
+		tabBarsQuery.buttons.element(boundBy: 1).tap()
 		sleep(1)
 		snapshot("2-emoticonList")
 		
-		tabBarsQuery.buttons.elementBoundByIndex(0).tap()
+		tabBarsQuery.buttons.element(boundBy: 0).tap()
 		
 		app.textFields["Text Field Dark"].tap()
 		
-		if deviceLanguage.containsString("en") {
+		if deviceLanguage.contains("en") {
 			app.buttons["Next keyboard"].tap()
 		}
-		else if deviceLanguage.containsString("fr") {
-			app.buttons["Clavier suivant"].tap()
-		}
-		else if deviceLanguage.containsString("de") {
-			app.buttons["Nächste Tastatur"].tap()
-		}
-		else if deviceLanguage.containsString("it") {
-			app.buttons["Tastiera successiva"].tap()
-		}
-		else if deviceLanguage.containsString("es") {
-			app.buttons["Teclado siguiente"].tap()
-		}
+		
 		sleep(2)
 		snapshot("0-keyboardDark")
     }

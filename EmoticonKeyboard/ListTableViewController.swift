@@ -55,30 +55,23 @@ class ListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-		tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier:"cell")
-		tableView.separatorColor = UIColor.blackColor()
-		tableView.tableFooterView = UIView(frame: CGRectZero)
-		tableView.contentInset = UIEdgeInsetsMake(20.0, 0.0, 49.0, 0.0)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+		
+		tableView.separatorColor = UIColor.black
+		tableView.separatorInset = UIEdgeInsets.zero
     }
 
     // MARK: - Table view data source
 
-	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return emoticons.count
 	}
 	
-	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
+	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
 		cell.textLabel?.text = emoticons[indexPath.row]
-		cell.textLabel?.textColor = UIColor.blackColor()
+		cell.textLabel?.textColor = UIColor.black
 		cell.backgroundColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.00)
-		cell.layoutMargins = UIEdgeInsetsZero
+		cell.layoutMargins = UIEdgeInsets.zero
 		cell.preservesSuperviewLayoutMargins = false
 		let backgroundView = UIView()
 		backgroundView.backgroundColor = UIColor(red: 0.722, green: 0.663, blue: 0.533, alpha: 1.00)
@@ -86,8 +79,13 @@ class ListTableViewController: UITableViewController {
 		return cell
 	}
 	
-	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		tableView.deselectRowAtIndexPath(indexPath, animated: true)
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		DispatchQueue.global(qos: .background).async {
+			let pasteboard = UIPasteboard.general
+			pasteboard.string = tableView.cellForRow(at: indexPath)?.textLabel?.text
+		}
+		
+		tableView.deselectRow(at: indexPath, animated: true)
 	}
 
 }

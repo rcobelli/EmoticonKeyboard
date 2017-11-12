@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardViewController" customModule="Keyboard" customModuleProvider="target">
             <connections>
                 <outlet property="backSpaceOutlet" destination="6uu-9j-ae5" id="stb-dA-0uM"/>
                 <outlet property="nextKeyboardButton" destination="GbC-JL-mbI" id="YxL-LY-B59"/>
+                <outlet property="spaceOutlet" destination="aHt-QJ-y87" id="hPj-NC-ANQ"/>
                 <outlet property="tableView" destination="41y-iB-9b4" id="c2x-hd-der"/>
             </connections>
         </placeholder>
@@ -18,8 +23,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="41y-iB-9b4">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="0.0" y="0.0" width="260" height="220"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="1Mk-AS-9W8"/>
@@ -27,43 +32,66 @@
                     </connections>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbC-JL-mbI">
-                    <rect key="frame" x="275" y="175" width="45" height="45"/>
+                    <rect key="frame" x="260" y="160" width="60" height="60"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="45" id="oB5-B9-HB0"/>
-                        <constraint firstAttribute="height" constant="45" id="r5i-ft-WOo"/>
+                        <constraint firstAttribute="height" constant="60" id="cIV-WA-Ts6"/>
+                        <constraint firstAttribute="width" constant="60" id="k1p-PA-40v"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                    <state key="normal" title="🌎"/>
+                    <inset key="contentEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
+                    <state key="normal" image="keyboard.png"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uu-9j-ae5">
-                    <rect key="frame" x="275" y="144" width="45" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uu-9j-ae5">
+                    <rect key="frame" x="260" y="80" width="60" height="60"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="HFI-wX-NUX"/>
-                        <constraint firstAttribute="width" constant="45" id="PeG-FY-KhX"/>
+                        <constraint firstAttribute="height" constant="60" id="AVN-e3-90b"/>
+                        <constraint firstAttribute="width" constant="60" id="dOU-3z-zjF"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                    <state key="normal" title="⌫">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <inset key="contentEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
+                    <state key="normal" image="backspace.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="buttonDown:" destination="-1" eventType="touchDown" id="heM-R2-hF5"/>
                         <action selector="buttonUp:" destination="-1" eventType="touchUpInside" id="cYW-m9-5Ux"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHt-QJ-y87">
+                    <rect key="frame" x="260" y="0.0" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="EoI-nd-0KB"/>
+                        <constraint firstAttribute="width" constant="60" id="p0L-QU-ErI"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
+                    <state key="normal" image="space.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="space:" destination="-1" eventType="touchUpInside" id="pMs-pG-qJj"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" red="0.72156862745098038" green="0.66274509803921566" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="GbC-JL-mbI" secondAttribute="trailing" id="0TZ-Qs-fQ4"/>
-                <constraint firstItem="GbC-JL-mbI" firstAttribute="top" secondItem="6uu-9j-ae5" secondAttribute="bottom" constant="1" id="0sJ-Fl-q9p"/>
-                <constraint firstAttribute="trailing" secondItem="41y-iB-9b4" secondAttribute="trailing" id="7Co-aR-rZS"/>
                 <constraint firstAttribute="bottom" secondItem="41y-iB-9b4" secondAttribute="bottom" id="BJy-VX-Oa5"/>
                 <constraint firstItem="41y-iB-9b4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="GS8-gB-5jo"/>
-                <constraint firstAttribute="bottom" secondItem="GbC-JL-mbI" secondAttribute="bottom" id="HP3-C0-Gl3"/>
-                <constraint firstAttribute="trailing" secondItem="6uu-9j-ae5" secondAttribute="trailing" id="PGr-mG-gvx"/>
+                <constraint firstItem="6uu-9j-ae5" firstAttribute="top" secondItem="aHt-QJ-y87" secondAttribute="bottom" constant="20" id="KGC-wX-W2l"/>
+                <constraint firstItem="aHt-QJ-y87" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LSI-wt-Va3"/>
+                <constraint firstAttribute="trailing" secondItem="GbC-JL-mbI" secondAttribute="trailing" id="Mnj-I9-v3H"/>
+                <constraint firstAttribute="trailing" secondItem="6uu-9j-ae5" secondAttribute="trailing" id="QV6-zy-3Zd"/>
+                <constraint firstItem="GbC-JL-mbI" firstAttribute="leading" secondItem="41y-iB-9b4" secondAttribute="trailing" id="UHl-QC-cSp"/>
+                <constraint firstItem="GbC-JL-mbI" firstAttribute="top" secondItem="6uu-9j-ae5" secondAttribute="bottom" constant="20" id="aZC-wm-dO6"/>
+                <constraint firstAttribute="trailing" secondItem="aHt-QJ-y87" secondAttribute="trailing" id="cWR-1F-cqh"/>
+                <constraint firstAttribute="bottom" secondItem="GbC-JL-mbI" secondAttribute="bottom" id="i9r-yN-a0M"/>
                 <constraint firstItem="41y-iB-9b4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="k7S-Xj-8ol"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
+    <resources>
+        <image name="backspace.png" width="100" height="100"/>
+        <image name="keyboard.png" width="104" height="104"/>
+        <image name="space.png" width="192" height="192"/>
+    </resources>
 </document>
