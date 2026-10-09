@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,12 +17,10 @@
 		943CA6331F68925A00626CC1 /* space.png in Resources */ = {isa = PBXBuildFile; fileRef = 943CA6321F68925A00626CC1 /* space.png */; };
 		947A0E4B1BE843EE0051B89D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A0E4A1BE843EE0051B89D /* AppDelegate.swift */; };
 		947A0E4D1BE843EE0051B89D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A0E4C1BE843EE0051B89D /* ViewController.swift */; };
-		947A0E501BE843EE0051B89D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947A0E4E1BE843EE0051B89D /* Main.storyboard */; };
 		947A0E521BE843EE0051B89D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947A0E511BE843EE0051B89D /* Assets.xcassets */; };
 		947A0E601BE843EE0051B89D /* EmoticonKeyboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A0E5F1BE843EE0051B89D /* EmoticonKeyboardUITests.swift */; };
 		947A0E711BE8444D0051B89D /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A0E701BE8444D0051B89D /* KeyboardViewController.swift */; };
-		947A0E751BE8444D0051B89D /* Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 947A0E6E1BE8444C0051B89D /* Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		947A0E7B1BE8448C0051B89D /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 947A0E7A1BE8448C0051B89D /* Keyboard.xib */; };
+		947A0E751BE8444D0051B89D /* Keyboard.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 947A0E6E1BE8444C0051B89D /* Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9486E9971BE8685E00DF5BB7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9486E9951BE8685E00DF5BB7 /* LaunchScreen.xib */; };
 		9486E99A1BE8688900DF5BB7 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9486E9981BE8688900DF5BB7 /* background.png */; };
 		9486E99B1BE8688900DF5BB7 /* logotext.png in Resources */ = {isa = PBXBuildFile; fileRef = 9486E9991BE8688900DF5BB7 /* logotext.png */; };
@@ -60,15 +58,15 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		947A0E791BE8444D0051B89D /* Embed App Extensions */ = {
+		947A0E791BE8444D0051B89D /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				947A0E751BE8444D0051B89D /* Keyboard.appex in Embed App Extensions */,
+				947A0E751BE8444D0051B89D /* Keyboard.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -84,7 +82,6 @@
 		947A0E471BE843EE0051B89D /* EmoticonKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmoticonKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		947A0E4A1BE843EE0051B89D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		947A0E4C1BE843EE0051B89D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		947A0E4F1BE843EE0051B89D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		947A0E511BE843EE0051B89D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		947A0E561BE843EE0051B89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		947A0E5B1BE843EE0051B89D /* EmoticonKeyboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmoticonKeyboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +90,6 @@
 		947A0E6E1BE8444C0051B89D /* Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Keyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		947A0E701BE8444D0051B89D /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		947A0E721BE8444D0051B89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		947A0E7A1BE8448C0051B89D /* Keyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Keyboard.xib; sourceTree = "<group>"; };
 		9486E9901BE8653600DF5BB7 /* EmoticonKeyboard-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EmoticonKeyboard-Bridging-Header.h"; sourceTree = "<group>"; };
 		9486E9961BE8685E00DF5BB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9486E9981BE8688900DF5BB7 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
@@ -157,7 +153,6 @@
 				9486E99D1BE8689600DF5BB7 /* Frameworks */,
 				947A0E4A1BE843EE0051B89D /* AppDelegate.swift */,
 				947A0E4C1BE843EE0051B89D /* ViewController.swift */,
-				947A0E4E1BE843EE0051B89D /* Main.storyboard */,
 				942C43A11C3B0D1F00E9BC18 /* ListTableViewController.swift */,
 				947A0E511BE843EE0051B89D /* Assets.xcassets */,
 				9486E9951BE8685E00DF5BB7 /* LaunchScreen.xib */,
@@ -189,7 +184,6 @@
 				942C43A91C3B3E0900E9BC18 /* InfoPlist.strings */,
 				947A0E701BE8444D0051B89D /* KeyboardViewController.swift */,
 				947A0E721BE8444D0051B89D /* Info.plist */,
-				947A0E7A1BE8448C0051B89D /* Keyboard.xib */,
 			);
 			path = Keyboard;
 			sourceTree = "<group>";
@@ -224,7 +218,7 @@
 				947A0E431BE843EE0051B89D /* Sources */,
 				947A0E441BE843EE0051B89D /* Frameworks */,
 				947A0E451BE843EE0051B89D /* Resources */,
-				947A0E791BE8444D0051B89D /* Embed App Extensions */,
+				947A0E791BE8444D0051B89D /* Embed Foundation Extensions */,
 				94223EBC1C531F42005B3DDF /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -278,13 +272,13 @@
 		947A0E3F1BE843EE0051B89D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 2700;
 				ORGANIZATIONNAME = "Rybel LLC";
 				TargetAttributes = {
 					947A0E461BE843EE0051B89D = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = AL6H9GEC6N;
 						LastSwiftMigration = 0900;
 					};
 					947A0E5A1BE843EE0051B89D = {
@@ -294,7 +288,6 @@
 					};
 					947A0E6D1BE8444C0051B89D = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = AL6H9GEC6N;
 						LastSwiftMigration = 0900;
 					};
 				};
@@ -304,6 +297,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -329,7 +323,6 @@
 				9486E99A1BE8688900DF5BB7 /* background.png in Resources */,
 				9486E99B1BE8688900DF5BB7 /* logotext.png in Resources */,
 				947A0E521BE843EE0051B89D /* Assets.xcassets in Resources */,
-				947A0E501BE843EE0051B89D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +340,6 @@
 				94E591081F6D971A00964821 /* backspace_white.png in Resources */,
 				943CA6311F68925600626CC1 /* backspace.png in Resources */,
 				94223EBE1C532308005B3DDF /* Images.xcassets in Resources */,
-				947A0E7B1BE8448C0051B89D /* Keyboard.xib in Resources */,
 				943CA6331F68925A00626CC1 /* space.png in Resources */,
 				943CA62F1F68925200626CC1 /* keyboard.png in Resources */,
 				94E5910A1F6D971D00964821 /* space_white.png in Resources */,
@@ -410,14 +402,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		947A0E4E1BE843EE0051B89D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				947A0E4F1BE843EE0051B89D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9486E9951BE8685E00DF5BB7 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -452,6 +436,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -462,6 +447,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -476,10 +462,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -508,6 +495,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -518,6 +506,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -526,10 +515,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -538,47 +529,67 @@
 		947A0E651BE843EE0051B89D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 180911;
+				DEVELOPMENT_TEAM = AL6H9GEC6N;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EmoticonKeyboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INFOPLIST_KEY_CFBundleDisplayName = "Emoji Key";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rybel-llc.stalkigram";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EmoticonKeyboard/EmoticonKeyboard-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		947A0E661BE843EE0051B89D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 180911;
+				DEVELOPMENT_TEAM = AL6H9GEC6N;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EmoticonKeyboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INFOPLIST_KEY_CFBundleDisplayName = "Emoji Key";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rybel-llc.stalkigram";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EmoticonKeyboard/EmoticonKeyboard-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		947A0E681BE843EE0051B89D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = AL6H9GEC6N;
 				INFOPLIST_FILE = EmoticonKeyboardUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rybel-llc.EmoticonKeyboardUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -591,8 +602,14 @@
 		947A0E691BE843EE0051B89D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = AL6H9GEC6N;
 				INFOPLIST_FILE = EmoticonKeyboardUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rybel-llc.EmoticonKeyboardUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -606,14 +623,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 180911;
+				DEVELOPMENT_TEAM = AL6H9GEC6N;
 				INFOPLIST_FILE = Keyboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				INFOPLIST_KEY_CFBundleDisplayName = "Emoji Key";
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rybel-llc.stalkigram.keyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -622,14 +647,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 180911;
+				DEVELOPMENT_TEAM = AL6H9GEC6N;
 				INFOPLIST_FILE = Keyboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				INFOPLIST_KEY_CFBundleDisplayName = "Emoji Key";
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rybel-llc.stalkigram.keyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

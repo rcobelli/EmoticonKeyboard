@@ -1,0 +1,16 @@
+reinstall_app true
+clear_previous_screenshots true
+stop_after_first_error true
+override_status_bar true
+override_status_bar_arguments("--time 9:41 --dataNetwork wifi --wifiMode active --wifiBars 3 --cellularMode active --operatorName '' --cellularBars 4 --batteryState charged --batteryLevel 100")
+
+devices([
+  "iPhone 17 Pro"
+])
+
+languages([
+  "en-US"
+])
+
+app_identifier "com.rybel-llc.stalkigram"
+scheme "EmoticonKeyboard"

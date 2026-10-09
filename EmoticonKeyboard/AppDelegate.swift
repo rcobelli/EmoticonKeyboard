@@ -1,38 +1,30 @@
-//
-//  AppDelegate.swift
-//  EmoticonKeyboard
-//
-//  Created by Ryan Cobelli on 11/2/15.
-//  Copyright © 2015 Rybel LLC. All rights reserved.
-//
-
+import SwiftUI
 import UIKit
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+final class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(
+        _ application: UIApplication,
+        performActionFor shortcutItem: UIApplicationShortcutItem,
+        completionHandler: @escaping (Bool) -> Void
+    ) {
+        guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
+            completionHandler(false)
+            return
+        }
 
-	var window: UIWindow?
-
-
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-		return true
-	}
-	
-	@available(iOS 9.0, *)
-	func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
-		UIApplication.shared.openURL(URL(string: UIApplicationOpenSettingsURLString)!)
-	}
-
-	func applicationWillResignActive(_ application: UIApplication) {}
-
-	func applicationDidEnterBackground(_ application: UIApplication) {}
-
-	func applicationWillEnterForeground(_ application: UIApplication) {}
-
-	func applicationDidBecomeActive(_ application: UIApplication) {}
-
-	func applicationWillTerminate(_ application: UIApplication) {}
-
-
+        application.open(settingsURL, options: [:], completionHandler: completionHandler)
+    }
 }
 
+@main
+struct EmoticonKeyboardApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
+    @Environment(\.scenePhase) private var scenePhase
+
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+        .onChange(of: scenePhase) { _, _ in }
+    }
+}
